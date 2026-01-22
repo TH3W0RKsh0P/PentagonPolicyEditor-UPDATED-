@@ -25,6 +25,19 @@ echo '# Based upon Pollen Policy Editor #'
 echo '#                                 #'
 echo '###################################'
 
+echo 'Default list:
+      • GoGuardian"
+      • GoGuardian License"
+      • Snap&Read"
+      • CoWriter"
+      • Read&Write"
+    IDs and other info: haldlgldplgnggkjaafhelgiaglafanh;https://goguardian.com/ext/m.xml","jjfeehgdeghiknkilcildnjofkcndjcm;https://goguardian.com/licenses/update.php","mloajfnmjckfjbeeofcdaecbelnblden;https://clients2.google.com/service/update2/crx","ifajfiofeifbbhbionejdliodenmecna;https://clients2.google.com/service/update2/crx","inoeonmfapjbbkmdafoankkfajkcphgd;https://clients2.google.com/service/update2/crx"
+'
+read -p 'Enter desired browser extensions (leave blank for default selection): ' EXT_LIST 
+
+if [[ $EXT_LIST -eq '' ]]; then 
+    EXT_LIST='"haldlgldplgnggkjaafhelgiaglafanh;https://goguardian.com/ext/m.xml","jjfeehgdeghiknkilcildnjofkcndjcm;https://goguardian.com/licenses/update.php","mloajfnmjckfjbeeofcdaecbelnblden;https://clients2.google.com/service/update2/crx","ifajfiofeifbbhbionejdliodenmecna;https://clients2.google.com/service/update2/crx","inoeonmfapjbbkmdafoankkfajkcphgd;https://clients2.google.com/service/update2/crx"'
+fi
 
 sleep 1
 
@@ -75,7 +88,7 @@ echo '{
   "ExtensionAllowedTypes": null,
   "ExtensionInstallAllowlist": null,
   "ExtensionInstallBlocklist": null,
-  "ExtensionInstallForcelist": ["haldlgldplgnggkjaafhelgiaglafanh;https://goguardian.com/ext/m.xml","jjfeehgdeghiknkilcildnjofkcndjcm;https://goguardian.com/licenses/update.php","bhdheahnajobgndecdbggfmcojekgdko;https://clients2.google.com/service/update2/crx"],
+  "ExtensionInstallForcelist": [$EXT_LIST],
   "ExtensionSettings": {"haldlgldplgnggkjaafhelgiaglafanh": { "blocked_permissions": [] },
   "CloudExtensionRequestEnabled": null,
   "PinnedLauncherApps": null,
@@ -141,4 +154,4 @@ echo '{
 
 echo 'Success!'
 echo 'Press ctrl shift q+q then repeatedly reload your policies!'
-echo 'Thanks for using PentagonPolicyEditor'
+echo 'Thanks for using Pentagon Policy Editor'
