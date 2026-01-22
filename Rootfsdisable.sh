@@ -13,3 +13,5 @@ else
   exit 1
 
 fi 
+
+echo 'if you recieve an error saying something like "cannot find required file /dev/mmcblk0" you may need to download or open this file and change the command to match your specific needs, thank you for using Pentgon Policy Editor RootFS disable'
